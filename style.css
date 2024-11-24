@@ -1,10 +1,21 @@
 /* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: pink; /* Pink background for the whole page */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec; /* Light pink background */
     color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p {
+    margin-bottom: 20px;
 }
 
 /* Sidebar Styles */
@@ -17,10 +28,13 @@ body {
     color: white;
     height: 100%;
     padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
     text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
 }
 
 .sidebar ul {
@@ -29,8 +43,9 @@ body {
 }
 
 .sidebar ul li {
-    padding: 10px;
+    padding: 15px;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .sidebar ul li a {
@@ -39,39 +54,89 @@ body {
     display: block;
 }
 
-/* Content Styles */
+.sidebar ul li:hover {
+    background-color: #4CAF50; /* Green highlight on hover */
+}
+
+/* Content Section */
 .content {
-    margin-left: 260px;
+    margin-left: 270px;
     padding: 20px;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #ff80ab; /* Pink Header */
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
-    color: #5a5a5a;
+    font-size: 2.5em;
 }
 
-.welcome-note, .about-info {
+/* Welcome Note Styles */
+.welcome-note, .about-info, .registration-form {
+    padding: 20px;
+    background-color: #ffe0e6;
     margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-note p, .about-info p {
     font-size: 1.2em;
 }
 
 /* Registration Form Styles */
 .registration-form label {
     font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
 .registration-form input, .registration-form select {
-    margin: 10px 0;
-    padding: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
     width: 100%;
-    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .registration-form input[type="submit"] {
     background-color: #4CAF50;
     color: white;
+    border: none;
+    padding: 12px 20px;
     cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 .registration-form input[type="submit"]:hover {
     background-color: #45a049;
 }
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .sidebar ul li {
+        font-size: 1.2em;
+    }
+    }
