@@ -1,0 +1,77 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: pink; /* Pink background for the whole page */
+    color: #333;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Content Styles */
+.content {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+header h1 {
+    color: #5a5a5a;
+}
+
+.welcome-note, .about-info {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Registration Form Styles */
+.registration-form label {
+    font-weight: bold;
+}
+
+.registration-form input, .registration-form select {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    font-size: 1em;
+}
+
+.registration-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.registration-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
